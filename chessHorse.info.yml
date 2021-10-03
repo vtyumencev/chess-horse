@@ -1,0 +1,6 @@
+name: ChessHorse
+description: Creates a chess board and places a horse in a random square, marking the available squares for movement
+core: 8.x
+core_version_requirement: ^8 || ^9
+type: module
+packege: ChessHorse

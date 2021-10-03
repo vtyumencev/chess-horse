@@ -1,0 +1,41 @@
+<div class="chess-table">
+
+    <div class="chess-table__sidebar-n-grid">
+
+        <div class="chess-table__left-sidebar">
+            {% for i in 8..1 %}
+                <div class="chess-table__left-sidebar-cell">
+                    {{ i }}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="chess-table__grid">
+            {% for i in 1..8 %}
+                {% for j in 1..8 %}
+                    {% set horsePossibilityFlag = false %}
+                    {% for cell in possibleTurnPlaces %}
+                        {% if j == cell['x'] and i == cell['y'] %}
+                            {% set horsePossibilityFlag = true %}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="chess-table__cell{{ (i + j) % 2 == 1 ? " chess-table__cell--dark" : "" }} {{ horsePossibilityFlag ? " chess-table__cell--possible" : "" }}">
+                        {% if j == horsePlace['x'] and i == horsePlace['y'] %}
+                            <div class="chess-table__figure-horse"></div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <div class="chess-table__bottom-sidebar">
+        {% for i in 0..7 %}
+            <div class="chess-table__bottom-sidebar-cell">
+                {{ range('a','h')[i] }}
+            </div>
+        {% endfor %}
+    </div>
+
+</div>

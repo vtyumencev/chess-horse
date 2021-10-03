@@ -1,0 +1,53 @@
+.chess-table {
+    margin-top: 20px;
+}
+.chess-table__sidebar-n-grid {
+    display: flex;
+}
+.chess-table__left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.chess-table__left-sidebar-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    font-size: 20px;
+}
+.chess-table__grid {
+    border: 2px solid #EEEEEE;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    flex-grow: 1;
+}
+.chess-table__cell {
+    padding-top: 100%;
+    position: relative;
+}
+.chess-table__cell--dark {
+    background: #EEEEEE;
+}
+.chess-table__figure-horse {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background-image: url(../img/horse.svg);
+    background-size: cover;
+    top: 20%;
+    left: 20%;
+}
+.chess-table__cell--possible {
+    background: #F42C2C;
+}
+.chess-table__bottom-sidebar {
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.chess-table__bottom-sidebar-cell  {
+    height: 30px;
+    font-size: 20px;
+    align-items: center;
+}

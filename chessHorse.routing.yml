@@ -1,0 +1,7 @@
+drupal.chess_horse_page:
+  path: 'chess-horse-page'
+  defaults:
+    _controller: '\Drupal\chessHorse\Controller\ChessHorsePage::content'
+    _title: 'Chess Horse Page'
+  requirements:
+    _permission: 'access content'
