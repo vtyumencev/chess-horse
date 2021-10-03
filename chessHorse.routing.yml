@@ -5,3 +5,5 @@ drupal.chess_horse_page:
     _title: 'Chess Horse Page'
   requirements:
     _permission: 'access content'
+  options:
+    no_cache: 'TRUE'

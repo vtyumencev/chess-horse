@@ -31,5 +31,4 @@ function chessHorse_theme($existing, $type, $theme, $path): array
 
 function chessHorse_preprocess_html(&$variables) {
     $variables['page']['#attached']['library'][] = 'chessHorse/chessHorse';
-    $variables['#cache']['max-age'] = 0;
 }
